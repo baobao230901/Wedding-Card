@@ -1,0 +1,223 @@
+@font-face {
+    font-family: GreatVibes;
+    src: url('../font/GreatVibes-Regular.ttf');
+}
+
+@font-face {
+    font-family: CormorantGaramond;
+    src: url('../font/CormorantGaramond-Regular.ttf');
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+$font-heading: GreatVibes;
+$font-body: CormorantGaramond;
+
+.hello {
+    
+}
+
+.wedding-card {
+    height: 100vh;
+    width: 100%;
+    padding: 30px;
+}
+
+body {
+    margin:0;
+    height:100%;
+}
+
+canvas{
+    position:absolute;
+    top:0;
+    left:0;
+    background-image: linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
+    background-image: -o-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
+    background-image: -moz-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
+    background-image: -webkit-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
+    background-image: -ms-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
+    
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+    );
+}
+
+.wed-left {
+    background-color: #f9fbee;
+    margin-right: 10px;
+    margin-left: -10px;
+    position: relative;
+    transform: translateX(50%);
+    z-index: 100;
+    transition: all 1s ease;
+
+    .text-bottom {
+        font-family: $font-heading;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .flower {
+        width: 103%;
+        margin: 0 0 0 -10px;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .wed-text {
+            font-family: $font-heading;
+            position: absolute;
+            width: max-content;
+            top: 38%;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: transparent;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+        }
+        
+        h1 {
+            font-size: 80px;
+            margin-top: -5px;
+            line-height: 100%;
+            margin-bottom: 0;
+        }
+
+        h5 {
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+}
+
+.wed-right {
+    background-color: #fcfdf8;
+    margin-left: 10px;
+    margin-right: -10px;    
+    position: relative;
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    .center {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+        font-family: $font-body;
+        font-weight: 600;
+    }
+    
+    .text-bottom {
+        font-family: $font-heading;
+        position: absolute;
+        bottom: -5px;
+        left: 10px;
+        z-index: 10;
+    }
+
+    .top-flow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .bottom-flow {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+        z-index: 0;
+    }
+
+    .head, .invite, .date-repeat {
+        color: #81827d;
+    }
+    
+    .invite {
+        margin-top: 20px;
+    }
+
+    .name {
+        margin: 20px 0;
+    }
+
+    .sub-head, .name, .date, .address{
+        color: #a9255e;
+    }
+
+    .head {
+        font-weight: bold;
+    }
+
+    .address {
+        font-size: 22px;
+        text-align: left;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding-left: 10px;
+    }
+
+    .time {
+        font-weight: bold;
+    }
+
+    .date {
+        font-size: 32px;
+    }
+
+    .date-repeat {
+        font-size: 32px;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .name {
+        font-family: $font-heading;
+    }
+}
